@@ -11,9 +11,14 @@
   <style>
     body {
       margin: 0; padding: 0;
-      background-color: lightgrey;}
+      background-color: lightgrey;
+    }
+    #gameboard {
+      width: 400px;
+      text-align: center;
+    }
     table {
-      margin-left: 50px;
+      margin: auto;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 70px;
     }
@@ -30,27 +35,36 @@
     td:hover {
       cursor: pointer;
     }
+    button#replay {
+      width: 80px;
+      margin: 20px;
+      padding: 10px;
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h1>Tic Tac Toe</h1>
-  <table>    
-    <tr>
-      <td class="bg-black" onclick="set(this)"></td>
-      <td onclick="set(this)"></td>
-      <td class="bg-black" onclick="set(this)"></td>
-    </tr>    
-    <tr>
-      <td onclick="set(this)"></td>
-      <td class="bg-black" onclick="set(this)"></td>
-      <td onclick="set(this)"></td>
-    </tr>    
-    <tr>
-      <td class="bg-black" onclick="set(this)"></td>
-      <td onclick="set(this)"></td>
-      <td class="bg-black" onclick="set(this)"></td>
-    </tr>
-    
-  </table>
+  <div id="gameboard">
+    <h1 id="id01">Tic Tac Toe</h1>
+    <table>    
+      <tr>
+        <td id="tl" class="bg-black" onclick="set(this)"></td>
+        <td id="tm" onclick="set(this)"></td>
+        <td id="tr" class="bg-black" onclick="set(this)"></td>
+      </tr>    
+      <tr>
+        <td id="ml" onclick="set(this)"></td>
+        <td id="mm" class="bg-black" onclick="set(this)"></td>
+        <td id="mr" onclick="set(this)"></td>
+      </tr>    
+      <tr>
+        <td id="bl" class="bg-black" onclick="set(this)"></td>
+        <td id="bm" onclick="set(this)"></td>
+        <td id="br" class="bg-black" onclick="set(this)"></td>
+      </tr>    
+    </table>
+
+    <button id="replay" onclick="reset()">Replay</button>
+  </div>
 </body>
 </html>
