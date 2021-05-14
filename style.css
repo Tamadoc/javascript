@@ -1,0 +1,40 @@
+body {
+  margin: 0; padding: 0;
+  background-color: lightgrey;
+}
+
+#game {
+  width: 400px;
+  text-align: center;
+}
+
+#gameboard {
+  width: 300px; height: 300px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 70px;
+}
+
+#gameboard div {
+  width: 33%;
+  height: 33%;
+  float: left;
+  background-color: white;
+  text-align: center;
+}
+
+#gameboard div.bg-black {
+  background-color: black;
+  color: white;
+}
+
+#gameboard div:hover {
+  cursor: pointer;
+}
+
+button#replay {
+  width: 80px;
+  margin: 20px 0;
+  padding: 10px;
+  display: none;
+}
